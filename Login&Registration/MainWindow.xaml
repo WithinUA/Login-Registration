@@ -1,0 +1,118 @@
+﻿<Window x:Class="Login_Registration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login_Registration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+            <GradientStop Color="#34C8E5" Offset="0"/>
+            <GradientStop Color="#FFE400FC" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Border Margin="10" CornerRadius="5" Background="White" Opacity="0.9" Padding="30 0 30 0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2.4*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Label Content="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" FontFamily="Georgia"/>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Username" VerticalAlignment="Center" Padding="0 -10 0 0" FontWeight="Bold" Margin="10 0 0 0" Foreground="#FF737373" FontSize="11"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/free-icon-user-profile-3795330.png" Margin="10 3 0 3"/>
+                    <TextBox x:Name="login_but" Grid.Column="1" BorderThickness="0" Text="Type your username" Foreground="#FF737373" VerticalAlignment="Center" Margin="10 0 0 0" PreviewMouseDown="clear_content_ev"/>
+                </Grid>
+                <Separator Grid.Row="2" Margin="10 0 10 0"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Username" VerticalAlignment="Center" Padding="0 -10 0 0" FontWeight="Bold" Margin="10 0 0 0" Foreground="#FF737373" FontSize="11"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/free-icon-padlock-1180134.png" Margin="10 3 0 3"/>
+                    <TextBox x:Name="pass_but" Grid.Column="1" BorderThickness="0" Text="Type your username" Foreground="#FF737373" VerticalAlignment="Center" Margin="10 0 0 0" PreviewMouseDown="clear_content_ev"/>
+                </Grid>
+                <Separator Grid.Row="2" Margin="10 0 10 0"/>
+                <Label Grid.Row="3" Content="Forgot Password?" VerticalAlignment="Center" Foreground="#FF737373" FontWeight="Bold" Padding="0 -10 0 0" HorizontalAlignment="Right" Margin="0 0 10 0" FontSize="11"/>
+            </Grid>
+            <Border Grid.Row="3"  CornerRadius="16" Padding="5" Margin="10">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="#FF34C8E5"/>
+                        <GradientStop Color="#FFE400FC" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Button BorderThickness="0" Background="Transparent" Content="L O G I N" Foreground="white" FontWeight="Bold"/>
+            </Border>
+
+            <Grid Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Or Sign Up Using" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="#FF737373" FontWeight="Bold"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/facebook.png" HorizontalAlignment="Right" Margin="5"/>
+                    <Image Grid.Column="1" Source="/twitter.png" HorizontalAlignment="Center" Margin="5"/>
+                    <Image Grid.Column="2" Margin="5" HorizontalAlignment="Left" Source="/google.png"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Havenot account yet?" Foreground="#FF737373" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="1"  CornerRadius="8" Padding="1" Margin="10">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                                <GradientStop Color="#FF34C8E5"/>
+                                <GradientStop Color="#FFE400FC" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Button x:Name="reg_button" BorderThickness="0" Background="Transparent" Content="R E G I S T R A T I O N" Foreground="white" FontWeight="Bold" Click="open_reg_window_ev"/>
+                    </Border>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+    </Border>
+</Window>
