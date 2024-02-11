@@ -36,7 +36,7 @@
                         <ColumnDefinition Width="7*"/>
                     </Grid.ColumnDefinitions>
                     <Image Source="/free-icon-user-profile-3795330.png" Margin="10 3 0 3"/>
-                    <TextBox x:Name="login_but" Grid.Column="1" BorderThickness="0" Text="Type your username" Foreground="#FF737373" VerticalAlignment="Center" Margin="10 0 0 0" PreviewMouseDown="clear_content_ev"/>
+                    <TextBox x:Name="login_text_box" Grid.Column="1" BorderThickness="0" Text="Type your username" Foreground="#FF737373" VerticalAlignment="Center" Margin="10 0 0 0" PreviewMouseDown="clear_content_ev"/>
                 </Grid>
                 <Separator Grid.Row="2" Margin="10 0 10 0"/>
             </Grid>
@@ -48,14 +48,15 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Label Content="Username" VerticalAlignment="Center" Padding="0 -10 0 0" FontWeight="Bold" Margin="10 0 0 0" Foreground="#FF737373" FontSize="11"/>
+                <Label Content="Password" VerticalAlignment="Center" Padding="0 -10 0 0" FontWeight="Bold" Margin="10 0 0 0" Foreground="#FF737373" FontSize="11"/>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="280*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Source="/free-icon-padlock-1180134.png" Margin="10 3 0 3"/>
-                    <TextBox x:Name="pass_but" Grid.Column="1" BorderThickness="0" Text="Type your username" Foreground="#FF737373" VerticalAlignment="Center" Margin="10 0 0 0" PreviewMouseDown="clear_content_ev"/>
+                    <Image Source="/free-icon-padlock-1180134.png" Margin="10,3,0,3" Grid.ColumnSpan="2"/>
+                    <PasswordBox x:Name="pass_text_box" Password="aaaaaa" Grid.Column="2" BorderThickness="0"  Foreground="#FF737373" VerticalAlignment="Center" Margin="10,0,0,0" PreviewMouseDown="pass_reset_ev"/>
                 </Grid>
                 <Separator Grid.Row="2" Margin="10 0 10 0"/>
                 <Label Grid.Row="3" Content="Forgot Password?" VerticalAlignment="Center" Foreground="#FF737373" FontWeight="Bold" Padding="0 -10 0 0" HorizontalAlignment="Right" Margin="0 0 10 0" FontSize="11"/>
@@ -67,7 +68,7 @@
                         <GradientStop Color="#FFE400FC" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <Button BorderThickness="0" Background="Transparent" Content="L O G I N" Foreground="white" FontWeight="Bold"/>
+                <Button x:Name="login_button" BorderThickness="0" Background="Transparent" Content="L O G I N" Foreground="white" FontWeight="Bold" Click="login_ev"/>
             </Border>
 
             <Grid Grid.Row="4">
@@ -82,9 +83,9 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="2.5*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Source="/facebook.png" HorizontalAlignment="Right" Margin="5"/>
-                    <Image Grid.Column="1" Source="/twitter.png" HorizontalAlignment="Center" Margin="5"/>
-                    <Image Grid.Column="2" Margin="5" HorizontalAlignment="Left" Source="/google.png"/>
+                    <Image Source="/facebook.png" HorizontalAlignment="Right" Margin="5" Cursor="Hand" MouseDown="facebook_ev" />
+                    <Image Grid.Column="1" Source="/twitter.png" HorizontalAlignment="Center" Margin="5" Cursor="Hand" MouseDown="twitter_ev"/>
+                    <Image Grid.Column="2" Margin="5" HorizontalAlignment="Left" Source="/google.png" Cursor="Hand" MouseDown="google_ev"/>
                 </Grid>
             </Grid>
 
@@ -112,7 +113,7 @@
                     </Border>
                 </Grid>
             </Grid>
-            
+
         </Grid>
     </Border>
 </Window>
