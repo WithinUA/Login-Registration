@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="290706580.jpg" />
     <None Remove="facebook.png" />
     <None Remove="free-icon-padlock-1180134.png" />
     <None Remove="free-icon-user-profile-3795330.png" />
@@ -19,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="290706580.jpg" />
     <Resource Include="facebook.png" />
     <Resource Include="free-icon-padlock-1180134.png" />
     <Resource Include="free-icon-user-profile-3795330.png" />

@@ -32,7 +32,12 @@ namespace Login_Registration
 
             if (user.PhotoPath != null)
             {
-                photo_border.Background = new ImageBrush(new BitmapImage(new Uri(user.PhotoPath)));
+                ImageBrush imageBrush = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(user.PhotoPath)),
+                    Stretch = Stretch.UniformToFill
+                };
+                photo_border.Background = imageBrush;
             }
             hello_label.Content = $"Hello {user.Login}";
         }
